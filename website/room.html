@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101827">
+  <title>Live Room — Live Game Coaching</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="room-page">
+  <header class="topbar">
+    <a class="wordmark" href="/">LGC <span>LIVE COACHING</span></a>
+    <div class="room-meta"><span class="live-dot"></span><span id="connection-label">CONNECTING</span><span class="room-code" id="room-label"></span></div>
+  </header>
+  <main class="room-layout">
+    <section class="stream-column">
+      <div class="video-shell">
+        <video id="remote-video" autoplay playsinline></video>
+        <div id="video-placeholder" class="video-placeholder">
+          <div class="pulse-icon">▶</div>
+          <h2>Waiting for gameplay</h2>
+          <p>Keep this page open. The stream will appear when the player connects.</p>
+        </div>
+        <div class="video-badge"><span class="live-dot"></span> LIVE</div>
+      </div>
+      <div class="stream-details">
+        <div><strong>Mobile gameplay</strong><p>Private coaching session</p></div>
+        <div class="quality-pill">Target: 720p · 60 FPS</div>
+      </div>
+    </section>
+    <aside class="chat-panel">
+      <div class="chat-heading"><div><h2>Coaching chat</h2><p>Send tips while they play</p></div><span class="chat-icon">↗</span></div>
+      <div id="messages" class="messages">
+        <div class="system-message">You joined the room. Be helpful and respectful.</div>
+      </div>
+      <form id="chat-form" class="chat-form">
+        <input id="chat-input" maxlength="300" placeholder="Give the player a tip..." autocomplete="off" required>
+        <button type="submit" aria-label="Send message">➤</button>
+      </form>
+      <p class="chat-note">Messages are sent to the player's floating overlay.</p>
+    </aside>
+  </main>
+  <script src="/js/room.js"></script>
+</body>
+</html>
